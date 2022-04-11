@@ -2,6 +2,11 @@
     padding-top: 5rem;
     margin-bottom: 10rem;
 
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
     .inner-container {
         display: flex;
         flex-direction: column;
@@ -16,6 +21,11 @@
     letter-spacing: -0.02em;
     margin-bottom: 4.4rem;
     margin-left: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .news__breadcrumbs-link:not(.active) {
@@ -40,6 +50,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
 }
 
 .news__heading {
@@ -49,12 +65,25 @@
     line-height: 1.2;
     text-transform: uppercase;
     font-family: var(--manzherok);
+
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .news__categories-list {
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+        margin-bottom: .5rem;
+    }
 }
 
 .news__categories-list-item {
@@ -63,10 +92,16 @@
 .news__heading-text {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     letter-spacing: -0.02em;
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .news__list {
@@ -74,6 +109,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
     grid-row-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-gap: 3rem;
+    }
 }
 
 .news__list-item {
@@ -89,6 +129,10 @@
 .news__image-container {
     position: relative;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
     &::before {
         content: '';
         display: block;
@@ -124,6 +168,12 @@
     left: 3rem;
     right: 3rem;
     z-index: 5;
+
+    @include breakpoint(mobile) {
+        left: 1rem;
+        top: 1rem;
+        right: 1rem;
+    }
 }
 
 .news__card-tag {
@@ -151,6 +201,11 @@
     line-height: 3rem;
     letter-spacing: -0.02em;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
 }
 
 .news__card-text {
@@ -159,10 +214,19 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     letter-spacing: -0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
 }
 
 .news__show-more {
     width: 25rem;
     margin-top: 5rem;
     align-self: center;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
 }
