@@ -20,7 +20,12 @@ export default function locationMap() {
             // Задание состояния для панели маршрутизации.
             control.routePanel.state.set({
                 from,
-                to
+                to,
+               
+            });
+
+            control.options.set({
+                autofocus: false
             });
 
             var multiRoutePromise = control.routePanel.getRouteAsync();

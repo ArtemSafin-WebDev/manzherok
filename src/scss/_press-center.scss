@@ -11,6 +11,23 @@
     align-items: center;
     gap: 0.8rem;
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.5rem;
+    }
+}
+
+.press-center__heading {
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+    }
 }
 
 .press-center__heading-text {
@@ -22,10 +39,21 @@
     letter-spacing: -0.02em;
     color: #848793;
     margin-bottom: 0.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 0;
+        align-self: center;
+    }
 }
 
 .press-center__all-link {
     margin-left: auto;
+
+    @include breakpoint(mobile) {
+
+    }
 }
 
 .press-center__slider {
@@ -39,6 +67,11 @@
         padding-right: 2rem;
         display: flex;
         flex-direction: column;
+
+        @include breakpoint(mobile) {
+            width: 80%;
+            padding-right: 1.2rem;
+        }
         &:last-child {
             padding-right: 0;
         }
@@ -68,6 +101,10 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
     &::before {
         content: '';
         display: block;
@@ -116,6 +153,12 @@
     left: 3rem;
     right: 3rem;
     z-index: 5;
+
+    @include breakpoint(mobile) {
+        left: 1rem;
+        top: 1rem;
+        right: 1rem;
+    }
 }
 
 .press-center__slider-card-tag {
@@ -134,6 +177,12 @@
     color: white;
     border: 1px solid white;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        padding: .8rem 1.4rem;
+    }
+
+    
 }
 
 .press-center__slider-card-title {
@@ -143,6 +192,11 @@
     line-height: 3rem;
     letter-spacing: -0.02em;
     position: relative;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 
    
 }
@@ -164,6 +218,12 @@
     text-fill-color: transparent;
     transition: opacity .2s;
     opacity: 0;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
 }
 
 

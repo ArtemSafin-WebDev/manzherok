@@ -22,6 +22,12 @@
     margin: 0 auto;
     margin-bottom: 3rem;
 
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
     em {
         font-style: normal;
         color: var(--primary-color);
@@ -62,6 +68,12 @@
     letter-spacing: -0.02em;
     gap: 1.2rem;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 
     img,
     svg {

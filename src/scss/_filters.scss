@@ -2,6 +2,10 @@
     margin-bottom: 10rem;
     position: relative;
     z-index: 10;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 }
 
 .filters__inner {
@@ -11,12 +15,21 @@
     padding: 2rem 3rem;
     background: rgba(26, 164, 86, 0.6);
     backdrop-filter: blur(27px);
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+    }
 }
 
 .filter__form-fields {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.5rem;
+    }
 }
 
 .filter__form-field {
@@ -27,6 +40,15 @@
     align-items: center;
     gap: 1rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 0.5rem 1rem;
+        padding-top: 0.3rem;
+        // &:nth-child(3),
+        // &:nth-child(4) {
+        //     grid-column: 1 / -1;
+        // }
+    }
 
     .datepicker.dropdown-menu {
         top: 100% !important;
@@ -112,6 +134,10 @@
         width: 1.5rem;
         height: 1.5rem;
         fill: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            margin-right: -0.3rem;
+        }
     }
 }
 
@@ -126,8 +152,14 @@
     font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: -0.02em;
+    white-space: nowrap;
+    flex-shrink: 0;
 
     color: #888d8a;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+    }
 }
 
 .filter__form-input {
@@ -140,9 +172,17 @@
     color: #393939;
     letter-spacing: -0.02em;
 
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+
     &--guests {
         width: 2rem;
         text-align: center;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+        }
     }
 }
 
@@ -198,6 +238,10 @@
     align-self: stretch;
     transition: color 0.2s;
     color: #393939;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 
     .no-touch &:hover,
     .touch &:active {

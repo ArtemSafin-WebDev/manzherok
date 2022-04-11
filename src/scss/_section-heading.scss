@@ -7,6 +7,11 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
 
+    @include breakpoint(mobile) {
+        font-size: 2.6rem;
+        line-height: 1.2;
+    }
+
     em {
         font-style: normal;
         color: var(--primary-color);

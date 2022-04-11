@@ -15,6 +15,13 @@
     --header-height: 8rem;
     --geometria: 'Geometria', sans-serif;
     --manzherok: 'Manzherok', sans-serif;
+
+    @include breakpoint(mobile) {
+        --content-padding: 1.5rem;
+        --header-height: 6rem;
+    }
+
+
 }
 
 html {
@@ -24,6 +31,15 @@ html {
 
     @media screen and (max-width: 1440px) {
         font-size: clamp(4px, 0.7vw, 10px);
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 9px;
     }
 
     @include noHighlight();

@@ -19,6 +19,10 @@
     text-transform: uppercase;
     user-select: none;
     cursor: pointer;
+
+    @include breakpoint(mobile) {
+        padding: 1rem 1.6rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -47,6 +51,10 @@
 
     &--large {
         padding: 1.7rem 5rem;
+
+        @include breakpoint(mobile) {
+            padding: 1.2rem 2.4rem;
+        }
     }
 
     .no-touch &:hover,
@@ -72,11 +80,21 @@
     transition: background-color 0.2s, border-color 0.2s;
     cursor: pointer;
 
+    @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+    }
+
     svg {
         width: 1.4rem;
         height: 1.4rem;
         fill: white;
         transition: fill 0.2s;
+
+        @include breakpoint(mobile) {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 
     &.swiper-button-lock {

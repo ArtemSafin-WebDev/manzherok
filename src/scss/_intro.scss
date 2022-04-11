@@ -1,5 +1,11 @@
 .intro {
     margin-bottom: -5rem;
+
+    @include breakpoint(mobile) {
+
+    }
+
+  
 }
 
 .intro__slider {
@@ -7,6 +13,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include breakpoint(mobile) {
+        min-height: 40rem;
+        margin: 0 calc(-1 * var(--content-padding));
+    }
 
     .swiper-container {
         flex-grow: 1;
@@ -34,6 +45,10 @@
     justify-content: center;
     flex-grow: 1;
     padding: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 2rem var(--content-padding);
+    }
 }
 
 .intro__slider-card-bg {
@@ -72,6 +87,12 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .intro__slider-card-title {
@@ -83,6 +104,10 @@
     margin-bottom: 2rem;
     max-width: 70rem;
     font-family: var(--manzherok);
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+    }
 }
 
 
@@ -94,4 +119,10 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @include breakpoint(mobile) {
+        right: var(--content-padding);
+        bottom: 8rem;
+        gap: 1rem;
+    }
 }

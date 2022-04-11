@@ -21,6 +21,7 @@ import reviewsSlider from './reviewsSlider';
 import tabs from './tabs';
 import gallerySlider from './gallerySlider';
 import locationMap from './location';
+import menu from './menu';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     masks();
     fileUpload();
     anchorLinks();
+    menu();
     accordions();
     mediaPlayer();
     modals();
@@ -44,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     tabs();
     gallerySlider();
     locationMap();
+  
 
 });
 
