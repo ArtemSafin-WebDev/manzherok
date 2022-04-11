@@ -1,0 +1,219 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="common-header">
+
+    <div class="container">
+        <div class="common-header__content">
+            <div class="common-header__bg">
+                <img src="img/vacancies-bg.jpg" alt="" class="common-header__bg-image">
+            </div>
+            <div class="common-header__breadcrumbs">
+                <a href="#" class="common-header__breadcrumbs-link">
+                    Главная
+                </a>
+                <span class="common-header__breadcrumbs-divider">
+                    ·
+                </span>
+
+                <a href="#" class="common-header__breadcrumbs-link active">
+                    Календарь событий
+                </a>
+            </div>
+            <h1 class="common-header__main-title">
+                календарь событий
+            </h1>
+            <div class="common-header__text">
+                План мероприятий, планируемых к проведению на территории<br> всесезонного курорта в 2022 году
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> filters }}
+
+
+<section class="activities activities--catalog">
+    <div class="container">
+        <div class="activities__content activities__content--no-bg">
+
+
+
+
+
+            <h2 class="section-heading activities__heading">
+                План мероприятий
+            </h2>
+            <div class="activities__top-categories">
+                <a href="#" class="activities__top-categories-link active">
+                    Все
+                </a>
+                <a href="#" class="activities__top-categories-link">
+                    Лето
+                </a>
+                <a href="#" class="activities__top-categories-link">
+                    Осень
+                </a>
+                <a href="#" class="activities__top-categories-link">
+                    Зима
+                </a>
+                <a href="#" class="activities__top-categories-link">
+                    Весна
+                </a>
+            </div>
+            <form action="/" method="GET" class="activities__filters-form">
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Январь
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Февраль
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Март
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Апрель
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Май
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Июнь
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Июль
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Август
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" checked="">
+                    <span class="activities__filters-checkbox-content">
+                        Сентябрь
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" disabled="">
+                    <span class="activities__filters-checkbox-content">
+                        Октябрь
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Ноябрь
+                    </span>
+                </label>
+                <label class="activities__filters-checkbox">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <span class="activities__filters-checkbox-content">
+                        Декабрь
+                    </span>
+                </label>
+            </form>
+
+
+
+            <ul class="activities__events-list">
+                <li class="activities__events-list-item">
+                    <a href="#" class="activities__events-card">
+                        <div class="activities__events-card-date">
+                            5–6 июня
+                        </div>
+                        <h3 class="activities__events-card-title">
+                            Открытие летнего сезона. Спортивно- развлекательная программа (организатор – ООО «ВК
+                            «Манжерок»)
+                        </h3>
+                    </a>
+                </li>
+                <li class="activities__events-list-item">
+                    <a href="#" class="activities__events-card">
+                        <div class="activities__events-card-date">
+                            15–20 июня
+                        </div>
+                        <h3 class="activities__events-card-title">
+                            Курсы повышения квалификации собственников и директоров российских горнолыжных комплексов
+                            (организаторы – Sport B2B Lab, ООО «ВК «Манжерок»)
+                        </h3>
+                    </a>
+                </li>
+                <li class="activities__events-list-item">
+                    <a href="#" class="activities__events-card">
+                        <div class="activities__events-card-date">
+                            1–4 июля
+                        </div>
+                        <h3 class="activities__events-card-title">
+                            Любительские соревнования
+                            по маунтинбайку в дисциплине даунхилл (организатор – ООО «ВК «Манжерок»)
+                        </h3>
+                    </a>
+                </li>
+                <li class="activities__events-list-item">
+                    <a href="#" class="activities__events-card">
+                        <div class="activities__events-card-date">
+                            Даты на согласовании
+                        </div>
+                        <h3 class="activities__events-card-title">
+                            Международный межпартийный молодежный фестиваль «Манжерок» (организаторы – политическая
+                            партия «Единая Россия», Молодая гвардия Единой России,
+                            ООО «ВК «Манжерок»)
+                        </h3>
+                    </a>
+                </li>
+                <li class="activities__events-list-item">
+                    <a href="#" class="activities__events-card">
+                        <div class="activities__events-card-date activities__events-card-date--lightgreen">
+                            1–3 сентября
+                        </div>
+                        <h3 class="activities__events-card-title">
+                            Закрытие летнего сезона. Любительские соревнования
+                            по маунтинбайку в дисциплине даунхилл (организатор – ООО «ВК «Манжерок»)
+                        </h3>
+                    </a>
+                </li>
+                <li class="activities__events-list-item">
+                    <a href="#" class="activities__events-card">
+                        <div class="activities__events-card-date activities__events-card-date--blue">
+                            29 января
+                        </div>
+                        <h3 class="activities__events-card-title">
+                            Любительские детские соревнования по горным лыжам и сноуборду (организаторы – ООО «ВК
+                            «Манжерок», горнолыжная школа Quicksilver)
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+{{/content}}
+{{/extend}}

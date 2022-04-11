@@ -120,6 +120,10 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.2;
+
+        br {
+            display: none;
+        }
     }
 }
 

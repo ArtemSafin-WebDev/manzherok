@@ -1,6 +1,13 @@
 .activities {
     margin-bottom: 10rem;
 
+    &--catalog {
+        @include breakpointMF(small-tablet) {
+            margin-top: -5rem;
+            margin-bottom: 3rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         margin-bottom: 5rem;
     }
@@ -14,6 +21,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    &--no-bg {
+        background-image: none;
+    }
 
     @include breakpoint(mobile) {
         background-image: none;
@@ -160,8 +171,6 @@
         height: 100%;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     }
-
-   
 }
 
 .activities__results-card-ornament {
@@ -246,10 +255,9 @@
     position: absolute;
 }
 
-
 .activities__results-card-sliding-content {
     margin-bottom: 2rem;
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
 
 .activities__tab-items {
@@ -264,14 +272,154 @@
     height: auto;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
     z-index: 5;
 
     &.active {
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
         z-index: 10;
         position: relative;
+    }
+}
+
+.activities__filters-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 1rem;
+    }
+}
+
+.activities__filters-checkbox {
+    user-select: none;
+
+    flex-shrink: 0;
+}
+
+.activities__filters-checkbox-content {
+    white-space: nowrap;
+    user-select: none;
+    text-align: center;
+    padding: 0.8rem 1.4rem;
+    background: #ffffff;
+    border: 1px solid #eaeae9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02em;
+    color: #393939;
+    min-width: 8.4rem;
+    display: block;
+    transition: color 0.2s, border-color 0.2s, opacity 0.2s;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+        min-width: none;
+    }
+}
+
+.activities__filters-checkbox-input {
+    display: none;
+}
+
+.activities__filters-checkbox-input[disabled] ~ .activities__filters-checkbox-content {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.activities__filters-checkbox-input:checked ~ .activities__filters-checkbox-content {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.activities__events-list {
+
+    margin: 0 -1rem;
+    margin-top: 4rem;
+    
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin: 0;
+        margin-top: 2rem;
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.activities__events-card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background: #ffffff;
+    border: 1px solid #eaeae9;
+    min-height: 35rem;
+    transition: color .2s, border-color .2s;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        min-height: 22rem;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: var(--primary-color);
+    }
+}
+
+.activities__events-card-date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #1aa456;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid currentColor;
+    margin-bottom: 3rem;
+    align-self: flex-start;
+
+  
+
+    &--lightgreen {
+        color: #74B743;
+    }
+
+    &--blue {
+        color: #40ACD6;
+    }
+}
+
+.activities__events-card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    margin-top: auto;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
     }
 }
