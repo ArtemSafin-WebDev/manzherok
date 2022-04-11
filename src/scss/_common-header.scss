@@ -1,0 +1,107 @@
+.common-header {
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.common-header__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(99.08deg, rgba(134, 48, 161, 0.8) 0.36%, rgba(225, 122, 28, 0.8) 99.65%);
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: 14rem;
+        width: 27rem;
+        height: 27rem;
+        background-image: url('../img/transparent-logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 2;
+      
+        position: absolute;
+    }
+}
+
+.common-header__bg-image {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.common-header__content {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    padding-bottom: 7rem;
+    min-height: 47rem;
+    position: relative;
+    z-index: 1;
+}
+
+.common-header__breadcrumbs {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: auto;
+}
+
+.common-header__breadcrumbs-link:not(.active) {
+    color: #c3c5c8;
+    &:link,
+    &:visited {
+        color: #c3c5c8;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
+}
+
+.common-header__main-title {
+    font-style: normal;
+    font-weight: 700;
+    font-family: var(--manzherok);
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.common-header__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+    max-width: 82rem;
+}
+
+
+.common-header__breadcrumbs-divider {
+    margin: 0 .2rem;
+}

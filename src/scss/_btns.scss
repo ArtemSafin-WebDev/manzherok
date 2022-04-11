@@ -1,0 +1,228 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    align-self: flex-start;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    position: relative;
+    z-index: 1;
+    padding: 1.2rem 1.5rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    text-transform: uppercase;
+    user-select: none;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(300.61deg, #0c71b8 0.96%, #1aa456 100%);
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    &--white {
+        color: white;
+        border-color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+
+    &--large {
+        padding: 1.7rem 5rem;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: transparent;
+        color: white;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.slider-arrow {
+    width: 5rem;
+    height: 5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: white;
+        transition: fill 0.2s;
+    }
+
+    &.swiper-button-lock {
+        display: none;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .no-touch &:not(.swiper-button-disabled):hover,
+    .touch &:not(.swiper-button-disabled):active {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    &--dark {
+        border-color: #393939;
+        svg {
+            fill: #393939;
+        }
+    }
+
+    .no-touch &--dark:not(.swiper-button-disabled):hover,
+    .touch &--dark:not(.swiper-button-disabled):active {
+        background: rgba(#393939, 0.1);
+    }
+}
+
+.reviews__slider-prev-arrow {
+    position: absolute;
+    left: 0;
+    top: 7rem;
+    z-index: 40;
+}
+
+.reviews__slider-next-arrow {
+    position: absolute;
+    right: 0;
+    top: 7rem;
+    z-index: 40;
+}
+
+.gradient-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: flex-start;
+    padding: 1.2rem 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+
+
+    & > span {
+        position: relative;
+        z-index: 5;
+    }
+
+    .no-touch &:hover,
+    .touch &:active,
+    &.active {
+        .gradient-btn__gradient {
+            &::after {
+                opacity: 0;
+            }
+        }
+
+        .gradient-btn__text--white {
+            opacity: 1;
+        }
+    }
+
+    .js-accordion.active & {
+        .gradient-btn__text--gradient {
+            display: none;
+        }
+        .gradient-btn__text--white {
+            display: none;
+        }
+
+        .gradient-btn__text--hidden {
+            display: block;
+        }
+
+        .gradient-btn__gradient::before {
+            background: #c3c5c8;
+        }
+
+        .gradient-btn__gradient {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.gradient-btn__text {
+    width: 100%;
+    align-self: stretch;
+}
+
+.gradient-btn__text--gradient {
+    background: linear-gradient(300.61deg, #0c71b8 0.96%, #1aa456 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.gradient-btn__gradient {
+    @include gradientBorder();
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.gradient-btn__text--white {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-self: stretch;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.gradient-btn__text--hidden {
+    display: none;
+    color: #c3c5c8;
+}

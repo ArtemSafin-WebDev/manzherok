@@ -1,0 +1,124 @@
+.feedback {
+    margin-bottom: 4rem;
+}
+
+.feedback__content {
+    background: #f7f7f7;
+}
+
+.feedback__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+    padding: 5.5rem 0;
+}
+
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.feedback__form-heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.feedback__form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+    grid-row-gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.feedback__form-input {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    height: 3.2rem;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    border-bottom: 1px solid #393939;
+    transition: border-color .2s;
+    &.parsley-error {
+        border-color: red;
+    }
+    @include placeholder {
+        color: #c3c5c8;
+    }
+}
+
+.feedback__logo {
+    width: 27rem;
+    height: 27rem;
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+    margin-left: 7rem;
+}
+
+.feedback__form-remark {
+    margin-bottom: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.02em;
+}
+
+.feedback__form-policy {
+    margin-bottom: 3rem;
+}
+
+.feedback__form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.feedback__form-checkbox-input {
+    display: none;
+}
+
+.feedback__form-checkbox-mark {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--text-color);
+    flex-shrink: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .2s;
+
+    .parsley-error & {
+        border-color: red;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--primary-color);
+        opacity: 0;
+        transition: opacity .2s;
+    }
+}
+
+
+.feedback__form-checkbox-input:checked ~ .feedback__form-checkbox-mark::before {
+    opacity: 1;
+}

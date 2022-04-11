@@ -1,0 +1,71 @@
+.contacts {
+    margin-bottom: 6rem;
+}
+
+.contacts__row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    background: #F7F7F7;
+    padding: 5.8rem 4rem;
+}
+
+.contacts__content {
+    grid-column: span 2;
+}
+
+.contacts__heading {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.contacts__info-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+.contacts__card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.7rem;
+}
+
+.contacts__card-link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.contacts__logo {
+    object-fit: contain;
+    width: 18rem;
+    height: 18rem;
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 4rem;
+}

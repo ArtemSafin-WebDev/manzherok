@@ -1,0 +1,235 @@
+.activities {
+    margin-bottom: 10rem;
+}
+
+.activities__content {
+    padding: 0 5rem;
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+    background-image: url('../img/activities-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.activities__heading {
+    margin-bottom: 1rem;
+}
+
+.activities__top-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    row-gap: 2rem;
+    margin-bottom: 4.5rem;
+}
+
+.activities__top-categories-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    position: relative;
+    display: block;
+
+    &::before {
+        content: '';
+        top: 100%;
+        left: 0;
+        height: 1px;
+        transition: transform 0.2s;
+        transform-origin: left center;
+        background-color: var(--primary-color);
+        transform: scaleX(0);
+        position: absolute;
+        width: 100%;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+    &.active {
+        color: var(--primary-color);
+
+        &::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.activities__results-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+.activities__results-list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.activities__results-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::before {
+        content: '';
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding-bottom: 100%;
+    }
+
+    .no-touch &:hover {
+        color: white;
+
+        .activities__results-card-content {
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        .activities__results-card-icon {
+            opacity: 0;
+        }
+
+        .activities__results-card-text {
+            opacity: 1;
+        }
+
+        .activities__results-card-sliding-content {
+            transform: translateY(-3.8rem);
+        }
+
+        svg {
+            fill: white;
+        }
+    }
+}
+
+.activities__results-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: opacity 0.2s;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    }
+
+   
+}
+
+.activities__results-card-ornament {
+    position: absolute;
+    right: -4.2rem;
+    top: 50%;
+    z-index: 5;
+    height: auto;
+    transform: translateY(-50%);
+    width: 5.8rem;
+}
+
+.activities__results-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activities__results-card-content {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #eaeae9;
+    padding: 2rem;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    svg {
+        flex-shrink: 0;
+        width: 2rem;
+        height: 1.2rem;
+        fill: var(--primary-color);
+        margin-top: auto;
+        transition: fill 0.2s;
+    }
+}
+
+.activities__results-card-icon {
+    width: auto;
+    height: 2.8rem;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+}
+
+.activities__results-card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.activities__results-card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    transition: opacity 0.2s;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    position: absolute;
+}
+
+
+.activities__results-card-sliding-content {
+    margin-bottom: 2rem;
+    transition: transform .2s;
+}
+
+.activities__tab-items {
+    position: relative;
+}
+
+.activities__tab-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility 0s linear .4s;
+    z-index: 5;
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s, visibility .4s;
+        z-index: 10;
+        position: relative;
+    }
+}

@@ -1,0 +1,97 @@
+.intro {
+    margin-bottom: -5rem;
+}
+
+.intro__slider {
+    min-height: 55rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .swiper-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .swiper-wrapper {
+        flex-grow: 1;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.intro__slider-card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 4rem;
+}
+
+.intro__slider-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    }
+}
+
+.intro__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro__slider-card-number {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.intro__slider-card-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    max-width: 70rem;
+    font-family: var(--manzherok);
+}
+
+
+.intro__slider-arrows {
+    position: absolute;
+    z-index: 10;
+    bottom: 11.4rem;
+    right: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

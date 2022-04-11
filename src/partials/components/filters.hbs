@@ -1,0 +1,55 @@
+<section class="filters">
+    <div class="container">
+        <div class="filters__inner">
+            <form action="GET" action="/" class="filter__form">
+                <div class="filter__form-fields">
+                    <div class="filter__form-field" id="from-container">
+                        <div class="filter__form-date">
+                            <label for="from" class="filter__form-label">Дата заезда</label>
+                            <input type="tel" name="from" class="filter__form-input js-datepicker" id="from" value="23.02.2022"
+                                readonly="" data-picker-container="#from-container">
+                        </div>
+                        <svg width="14" height="14" aria-hidden="true" class="icon-calendar">
+                            <use xlink:href="#calendar"></use>
+                        </svg>
+                    </div>
+                    <div class="filter__form-field" id="to-container">
+                        <div class="filter__form-date">
+                            <label for="to" class="filter__form-label">Дата заезда</label>
+                            <input type="tel" name="to" class="filter__form-input js-datepicker" id="to" value="28.02.2022"
+                                readonly="" data-picker-container="#to-container">
+                        </div>
+
+                        <svg width="14" height="14" aria-hidden="true" class="icon-calendar">
+                            <use xlink:href="#calendar"></use>
+                        </svg>
+                    </div>
+                    <div class="filter__form-field">
+                        <div class="filter__form-date">
+                            <label for="guests" class="filter__form-label">Гости (в том числе дети)</label>
+                            <div class="filter__form-guests js-guests">
+                                <button class="filter__form-btn js-guests-minus" type="button">
+                                    -
+                                </button>
+                                <input type="tel" name="guests"
+                                    class="filter__form-input filter__form-input--guests js-guests-input" id="guests"
+                                    value="3" readonly="">
+                                <button class="filter__form-btn js-guests-plus" type="button">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        <svg width="14" height="14" aria-hidden="true" class="icon-user">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                    </div>
+                    <div class="filter__form-field filter__form-field--no-padding">
+                        <button type="submit" class="filter__form-submit" type="submit">
+                            Найти номер
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

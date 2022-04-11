@@ -1,0 +1,74 @@
+.reviews {
+    margin-bottom: 8rem;
+}
+
+.reviews__heading {
+    margin-bottom: 9rem;
+}
+
+.reviews__slider {
+    position: relative;
+
+    .swiper-slide {
+        width: 33.33%;
+    }
+}
+
+.reviews__slider-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews__slider-card-top-row {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #888d8a;
+    padding-bottom: 1rem;
+}
+
+.reviews__slider-card-author-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+}
+
+.reviews__slider-card-rating {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 1rem;
+
+    svg {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: var(--primary-color);
+    }
+}
+
+.reviews__slider-card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+}
+
+.reviews__slider-card-show-more {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}

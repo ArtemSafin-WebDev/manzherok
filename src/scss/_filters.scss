@@ -1,0 +1,206 @@
+.filters {
+    margin-bottom: 10rem;
+    position: relative;
+    z-index: 10;
+}
+
+.filters__inner {
+    max-width: 96rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    background: rgba(26, 164, 86, 0.6);
+    backdrop-filter: blur(27px);
+}
+
+.filter__form-fields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 2rem;
+}
+
+.filter__form-field {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+
+    .datepicker.dropdown-menu {
+        top: 100% !important;
+        right: 0 !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: none;
+        font-size: 16px;
+        line-height: 25px;
+        box-shadow: 0 0 1rem rgba(black, 0.1);
+        padding: 10px;
+        width: 260px;
+
+        @include breakpoint(mobile) {
+            top: 100% !important;
+            right: auto !important;
+            left: 0 !important;
+            bottom: auto !important;
+        }
+    }
+
+    &:nth-child(even) {
+        @include breakpoint(mobile) {
+            .datepicker.dropdown-menu {
+                left: auto !important;
+                right: 0;
+            }
+        }
+    }
+
+    .datepicker-dropdown:before,
+    .datepicker-dropdown:after {
+        display: none;
+    }
+
+    .datepicker table tr td.active,
+    .datepicker table tr td.active.disabled,
+    .datepicker table tr td.active.disabled:hover,
+    .datepicker table tr td.active:hover {
+        text-shadow: none;
+        background: var(--primary-color);
+    }
+
+    .datepicker table tr td span.active.active,
+    .datepicker table tr td span.active.disabled,
+    .datepicker table tr td span.active.disabled.active,
+    .datepicker table tr td span.active.disabled.disabled,
+    .datepicker table tr td span.active.disabled:active,
+    .datepicker table tr td span.active.disabled:hover,
+    .datepicker table tr td span.active.disabled:hover.active,
+    .datepicker table tr td span.active.disabled:hover.disabled,
+    .datepicker table tr td span.active.disabled:hover:active,
+    .datepicker table tr td span.active.disabled:hover:hover,
+    .datepicker table tr td span.active.disabled:hover[disabled],
+    .datepicker table tr td span.active.disabled[disabled],
+    .datepicker table tr td span.active:active,
+    .datepicker table tr td span.active:hover,
+    .datepicker table tr td span.active:hover.active,
+    .datepicker table tr td span.active:hover.disabled,
+    .datepicker table tr td span.active:hover:active,
+    .datepicker table tr td span.active:hover:hover,
+    .datepicker table tr td span.active:hover[disabled],
+    .datepicker table tr td span.active[disabled] {
+        background: var(--primary-color);
+    }
+
+    .datepicker table tr td span.active,
+    .datepicker table tr td span.active.disabled,
+    .datepicker table tr td span.active.disabled:hover,
+    .datepicker table tr td span.active:hover {
+        background: var(--primary-color);
+    }
+
+    &--no-padding {
+        padding: 0;
+    }
+
+    .icon-calendar,
+    .icon-user {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: var(--primary-color);
+    }
+}
+
+.filter__form-date {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.filter__form-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02em;
+
+    color: #888d8a;
+}
+
+.filter__form-input {
+    padding: 0;
+    font: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #393939;
+    letter-spacing: -0.02em;
+
+    &--guests {
+        width: 2rem;
+        text-align: center;
+    }
+}
+
+.filter__form-guests {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: -0.6rem;
+}
+
+.filter__form-btn {
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    transition: color 0.2s, opacity 0.2s;
+    color: #393939;
+
+    &[disabled],
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.filter__form-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    width: 100%;
+    flex-grow: 1;
+    align-self: stretch;
+    transition: color 0.2s;
+    color: #393939;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
