@@ -1,5 +1,9 @@
 .contacts {
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .contacts__row {
@@ -7,8 +11,14 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
     align-items: center;
-    background: #F7F7F7;
+    background: #f7f7f7;
     padding: 5.8rem 4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        margin: 0 calc(-1 * var(--content-padding));
+        padding: 2rem var(--content-padding);
+    }
 }
 
 .contacts__content {
@@ -23,12 +33,22 @@
     letter-spacing: -0.04em;
     text-transform: uppercase;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
 }
 
 .contacts__info-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }
 
 .contacts__card-title {
@@ -38,6 +58,10 @@
     line-height: 2.4rem;
     letter-spacing: -0.02em;
     margin-bottom: 0.7rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+    }
 }
 
 .contacts__card-link {
@@ -49,17 +73,20 @@
     text-transform: uppercase;
     color: var(--primary-color);
 
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
     &:link,
     &:visited {
         color: var(--primary-color);
-
     }
 
     &:hover {
         text-decoration: underline;
     }
 }
-
 
 .contacts__logo {
     object-fit: contain;
@@ -68,4 +95,8 @@
     align-self: center;
     justify-self: flex-start;
     margin-left: 4rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

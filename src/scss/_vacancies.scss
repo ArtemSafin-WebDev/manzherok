@@ -1,17 +1,27 @@
 .vacancies {
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 }
 
 .vacancies__list {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 2rem;
+
+    
 }
 
 .vacancies__accordion {
     padding: 5rem;
 
     @include gradientBorder();
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+    }
 }
 
 .vacancies__accordion-top-row {
@@ -21,6 +31,15 @@
     justify-content: space-between;
     gap: 2rem;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .vacancies__accordion-title {
@@ -30,6 +49,11 @@
     line-height: 3.8rem;
     letter-spacing: -0.04em;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
 }
 
 .vacancies__accordion-salary {
@@ -39,6 +63,13 @@
     line-height: 2.4rem;
     letter-spacing: -0.02em;
     text-align: right;
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        text-align: left;
+    }
 }
 
 .vacancies__accordion-desc {
@@ -47,6 +78,11 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     letter-spacing: -0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
 }
 
 .vacancies__accordion-content {
@@ -57,12 +93,20 @@
 .vacancies__accordion-content-inner {
     padding-bottom: 1rem;
     padding-top: 5rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 1.5rem;
+    }
 }
 
 .vacancies__accordion-info {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+    }
 }
 
 .vacancies__accordion-info-item {
@@ -90,6 +134,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2rem;
     grid-row-gap: 0.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 
 .vacancies__accordion-info-list-item {
@@ -130,6 +178,10 @@
 
     margin-top: 4rem;
     width: 30rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 
     & > span {
         position: relative;
