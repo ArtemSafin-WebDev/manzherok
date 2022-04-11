@@ -82,8 +82,14 @@
 
     @include breakpoint(mobile) {
         gap: 1rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
+}
+
+.news__categories-list--vertical {
+    max-width: 104.8rem;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .news__categories-list-item {
@@ -110,6 +116,13 @@
     grid-gap: 2rem;
     grid-row-gap: 8rem;
 
+    @include breakpointMF(small-tablet) {
+        &--vertical {
+            grid-template-columns: minmax(0, 1fr);
+            grid-gap: 3rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         grid-gap: 3rem;
@@ -124,11 +137,50 @@
 .news__card {
     display: flex;
     flex-direction: column;
+
+    .no-touch &:hover,
+    .touch &:active {
+        .news__card-image {
+            transform: scale(1.03);
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        .news__list--vertical & {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+  
+}
+
+.news__card-content {
+    @include breakpointMF(small-tablet) {
+        .news__list--vertical & {
+            width: 50%;
+            flex-grow: 1;
+        }
+       
+    }
 }
 
 .news__image-container {
     position: relative;
     margin-bottom: 3rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    @include breakpointMF(small-tablet) {
+        .news__list--vertical & {
+            margin-bottom: 0;
+            margin-right: 5rem;
+            width: 45rem;
+            flex-shrink: 0;
+        }
+    }
+
+  
 
     @include breakpoint(mobile) {
         margin-bottom: 1rem;
@@ -157,6 +209,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .3s;
 }
 
 .news__card-tags {
