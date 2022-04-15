@@ -22,6 +22,8 @@ import tabs from './tabs';
 import gallerySlider from './gallerySlider';
 import locationMap from './location';
 import menu from './menu';
+import aboutSeasons from './aboutSeasons';
+import constructionSlider from './constructionSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
     tabs();
     gallerySlider();
     locationMap();
+    aboutSeasons();
+    constructionSlider();
   
 
 });

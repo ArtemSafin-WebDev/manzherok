@@ -1,0 +1,97 @@
+.about-location {
+    margin-bottom: 5rem;
+}
+
+.about-location__content {
+    padding: 0 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.about-location__heading {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+}
+
+.about-location__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.about-location__card-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.about-location__card-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+.about-location__card-list-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+    padding-left: 2.7rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 1.6rem;
+        height: 1.6rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../img/checkmark.svg');
+        position: absolute;
+        left: 0;
+        top: 0.55rem;
+
+        @include breakpoint(mobile) {
+
+        }
+    }
+}
+
+.about-location__card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: -0.02em;
+}

@@ -1,0 +1,43 @@
+.about-advantage {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.about-advantage__content {
+    padding: 0 5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.about-advantage__text {
+    max-width: 108.4rem;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    p {
+       
+        margin-bottom: 2rem;
+
+       
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    em {
+        font-style: normal;
+        font-weight: 700;
+    }
+}
