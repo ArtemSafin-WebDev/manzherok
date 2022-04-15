@@ -24,6 +24,8 @@ import locationMap from './location';
 import menu from './menu';
 import aboutSeasons from './aboutSeasons';
 import constructionSlider from './constructionSlider';
+import otherNews from './otherNews';
+import articleGallery from './articleGallery';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     locationMap();
     aboutSeasons();
     constructionSlider();
-  
+    otherNews();  
+    articleGallery();
 
 });
 

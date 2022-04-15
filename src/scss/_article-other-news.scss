@@ -1,0 +1,232 @@
+.article-other-news {
+    margin-bottom: 14rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.article-other-news__top-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      
+        margin-bottom: 3rem;
+    }
+}
+
+.article-other-news__heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.8rem;
+    line-height: 6rem;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+}
+
+.article-other-news__arrows {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.article-other-news__arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    transition: opacity .2s;
+
+    &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+    svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.article-other-news__slider {
+    .swiper-slide {
+        box-sizing: content-box;
+        width: 52.4rem;
+        padding-right: 2rem;
+
+        @include breakpoint(mobile) {
+            width: 95%;
+            padding-right: 1rem;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .swiper-container {
+        overflow: visible;
+    }
+}
+
+.article-other-news__card {
+    flex-grow: 1;
+    display: grid;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
+    color: white;
+
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 70%;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 65%;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        .article-other-news__card-bg {
+           
+
+            &::before {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.article-other-news__card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        transition: opacity .2s;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background: linear-gradient(300.61deg, #0c71b8 0.96%, #1aa456 100%);
+        opacity: 0;
+        transition: opacity .2s;
+    }
+}
+
+.article-other-news__card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-other-news__card-content {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    z-index: 2;
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+    }
+}
+
+.article-other-news__card-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.article-other-news__card-date {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.article-other-news__card-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.article-other-news__card-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid white;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        padding: .7rem 1.4rem;
+    }
+}
+
+.article-other-news__card-title {
+    margin-top: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    letter-spacing: -0.02em;
+    min-height: 12rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        min-height: 8rem;
+        min-height: auto;
+    }
+}
