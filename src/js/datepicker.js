@@ -47,7 +47,7 @@ export default function datepicker() {
 
         const difference = date2.diff(date1, 'day');
 
-        // console.log('Difference', difference);
+        console.log('Difference', difference);
 
         if (nights) {
             nights.value = difference;
@@ -77,8 +77,8 @@ export default function datepicker() {
             container: from.hasAttribute('data-picker-container') ? from.getAttribute('data-picker-container') : '#picker-container',
             language: 'ru',
             autoclose: true,
-            startDate: '+1d',
-            endDate: $(to).datepicker('getDate')
+            startDate: '+1d'
+            // endDate: $(to).datepicker('getDate')
         })
         .on('show', function(e) {
             from.classList.add('datepicker-shown');
@@ -100,6 +100,15 @@ export default function datepicker() {
                     .toDate()
             );
 
+            const date1 = dayjs(from.value, 'DD.MM.YYYY');
+            const date2 = dayjs(to.value, 'DD.MM.YYYY');
+
+            const difference = date2.diff(date1, 'day');
+
+            if (difference < 1) {
+                $(to).datepicker('setDate', date1.add(1, 'day').toDate());
+            }
+
             getDifference();
         });
 
@@ -108,22 +117,22 @@ export default function datepicker() {
     $(to)
         .datepicker()
         .on('changeDate', function(e) {
-            $(from).datepicker(
-                'setEndDate',
-                dayjs(e.date)
-                    .subtract(1, 'day')
-                    .toDate()
-            );
+            // $(from).datepicker(
+            //     'setEndDate',
+            //     dayjs(e.date)
+            //         .subtract(1, 'day')
+            //         .toDate()
+            // );
 
             getDifference();
         });
 
-    $(from).datepicker(
-        'setEndDate',
-        dayjs($(to).datepicker('getDate'))
-            .subtract(1, 'day')
-            .toDate()
-    );
+    // $(from).datepicker(
+    //     'setEndDate',
+    //     dayjs($(to).datepicker('getDate'))
+    //         .subtract(1, 'day')
+    //         .toDate()
+    // );
 
     getDifference();
 }
