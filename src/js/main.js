@@ -26,6 +26,7 @@ import aboutSeasons from './aboutSeasons';
 import constructionSlider from './constructionSlider';
 import otherNews from './otherNews';
 import articleGallery from './articleGallery';
+import introFeatures from './introFeatures';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     constructionSlider();
     otherNews();  
     articleGallery();
+    introFeatures();
 
 });
 
