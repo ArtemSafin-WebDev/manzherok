@@ -456,8 +456,9 @@
                     <div class="filter__form-field" id="from-container">
                         <div class="filter__form-date">
                             <label for="from" class="filter__form-label">Дата заезда</label>
-                            <input type="tel" name="from" class="filter__form-input js-datepicker" id="from" value="23.02.2022"
-                                readonly="" data-picker-container="#from-container">
+                            <input type="tel" name="from" class="filter__form-input js-datepicker" id="from" readonly=""
+                                data-picker-container="#from-container">
+                            <input type="hidden" name="date" readonly="" id="start-date">
                         </div>
                         <svg width="14" height="14" aria-hidden="true" class="icon-calendar">
                             <use xlink:href="#calendar"></use>
@@ -465,9 +466,10 @@
                     </div>
                     <div class="filter__form-field" id="to-container">
                         <div class="filter__form-date">
-                            <label for="to" class="filter__form-label">Дата заезда</label>
-                            <input type="tel" name="to" class="filter__form-input js-datepicker" id="to" value="28.02.2022"
-                                readonly="" data-picker-container="#to-container">
+                            <label for="to" class="filter__form-label">Дата выезда</label>
+                            <input type="tel" name="to" class="filter__form-input js-datepicker" id="to" readonly=""
+                                data-picker-container="#to-container">
+                            <input type="hidden" name="nights" readonly="" id="nights">
                         </div>
 
                         <svg width="14" height="14" aria-hidden="true" class="icon-calendar">
