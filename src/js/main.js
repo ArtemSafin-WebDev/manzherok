@@ -27,6 +27,7 @@ import constructionSlider from './constructionSlider';
 import otherNews from './otherNews';
 import articleGallery from './articleGallery';
 import introFeatures from './introFeatures';
+import reviewsShowMore from './reviewsShowMore';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     otherNews();  
     articleGallery();
     introFeatures();
+    reviewsShowMore();
 
 });
 

@@ -80,7 +80,8 @@
     }
 }
 
-.reviews__slider-card-text {
+.reviews__slider-card-text,
+.reviews__slider-card-text-hidden {
     font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
@@ -126,5 +127,19 @@
         .slider-arrow {
             position: static !important;
         }
+    }
+}
+
+.reviews__slider-card-text {
+    .text-shown & {
+        display: none;
+    }
+}
+
+.reviews__slider-card-text-hidden {
+    display: none;
+
+    .text-shown & {
+        display: contents;
     }
 }
