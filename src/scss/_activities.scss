@@ -110,6 +110,8 @@
 .activities__results-list-item {
     display: flex;
     flex-direction: column;
+
+ 
 }
 
 .activities__results-card {
@@ -344,10 +346,9 @@
 }
 
 .activities__events-list {
-
     margin: 0 -1rem;
     margin-top: 4rem;
-    
+
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 3rem;
@@ -361,6 +362,16 @@
     }
 }
 
+.activities__events-list-item {
+    display: flex;
+    flex-direction: column;
+    &.hidden {
+        display: none;
+    }
+}
+
+
+
 .activities__events-card {
     display: flex;
     flex-direction: column;
@@ -368,8 +379,8 @@
     background: #ffffff;
     border: 1px solid #eaeae9;
     min-height: 35rem;
-    transition: color .2s, border-color .2s;
-
+    transition: color 0.2s, border-color 0.2s;
+    flex-grow: 1;
     @include breakpoint(mobile) {
         padding: 2rem;
         min-height: 22rem;
@@ -399,14 +410,12 @@
     margin-bottom: 3rem;
     align-self: flex-start;
 
-  
-
     &--lightgreen {
-        color: #74B743;
+        color: #74b743;
     }
 
     &--blue {
-        color: #40ACD6;
+        color: #40acd6;
     }
 }
 

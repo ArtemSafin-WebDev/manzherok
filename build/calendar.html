@@ -383,7 +383,7 @@
     </div>
 </section>
 
-<section class="activities activities--catalog">
+<section class="activities activities--catalog js-events">
     <div class="container">
         <div class="activities__content activities__content--no-bg">
 
@@ -398,88 +398,88 @@
                 <a href="#" class="activities__top-categories-link active">
                     Все
                 </a>
-                <a href="#" class="activities__top-categories-link">
+                <a href="#" class="activities__top-categories-link" data-season="summer">
                     Лето
                 </a>
-                <a href="#" class="activities__top-categories-link">
+                <a href="#" class="activities__top-categories-link" data-season="autumn">
                     Осень
                 </a>
-                <a href="#" class="activities__top-categories-link">
+                <a href="#" class="activities__top-categories-link" data-season="winter">
                     Зима
                 </a>
-                <a href="#" class="activities__top-categories-link">
+                <a href="#" class="activities__top-categories-link" data-season="spring">
                     Весна
                 </a>
             </div>
             <form action="/" method="GET" class="activities__filters-form">
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="january" data-season="winter">
                     <span class="activities__filters-checkbox-content">
                         Январь
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="february" data-season="winter">
                     <span class="activities__filters-checkbox-content">
                         Февраль
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="march" data-season="spring">
                     <span class="activities__filters-checkbox-content">
                         Март
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="april" data-season="spring">
                     <span class="activities__filters-checkbox-content">
                         Апрель
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="may" data-season="spring">
                     <span class="activities__filters-checkbox-content">
                         Май
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="june" data-season="summer">
                     <span class="activities__filters-checkbox-content">
                         Июнь
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="july" data-season="summer">
                     <span class="activities__filters-checkbox-content">
                         Июль
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="august" data-season="summer">
                     <span class="activities__filters-checkbox-content">
                         Август
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" checked="">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="september" data-season="autumn">
                     <span class="activities__filters-checkbox-content">
                         Сентябрь
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" disabled="">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="october" data-season="autumn">
                     <span class="activities__filters-checkbox-content">
                         Октябрь
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="november" data-season="autumn">
                     <span class="activities__filters-checkbox-content">
                         Ноябрь
                     </span>
                 </label>
                 <label class="activities__filters-checkbox">
-                    <input type="checkbox" class="activities__filters-checkbox-input" name="month">
+                    <input type="checkbox" class="activities__filters-checkbox-input" name="month" value="december" data-season="winter">
                     <span class="activities__filters-checkbox-content">
                         Декабрь
                     </span>
@@ -489,7 +489,7 @@
 
 
             <ul class="activities__events-list">
-                <li class="activities__events-list-item">
+                <li class="activities__events-list-item" data-month="june">
                     <a href="#" class="activities__events-card">
                         <div class="activities__events-card-date">
                             5–6 июня
@@ -500,7 +500,7 @@
                         </h3>
                     </a>
                 </li>
-                <li class="activities__events-list-item">
+                <li class="activities__events-list-item" data-month="june">
                     <a href="#" class="activities__events-card">
                         <div class="activities__events-card-date">
                             15–20 июня
@@ -511,7 +511,7 @@
                         </h3>
                     </a>
                 </li>
-                <li class="activities__events-list-item">
+                <li class="activities__events-list-item" data-month="july">
                     <a href="#" class="activities__events-card">
                         <div class="activities__events-card-date">
                             1–4 июля
@@ -534,7 +534,7 @@
                         </h3>
                     </a>
                 </li>
-                <li class="activities__events-list-item">
+                <li class="activities__events-list-item" data-month="september">
                     <a href="#" class="activities__events-card">
                         <div class="activities__events-card-date activities__events-card-date--lightgreen">
                             1–3 сентября
@@ -545,7 +545,7 @@
                         </h3>
                     </a>
                 </li>
-                <li class="activities__events-list-item">
+                <li class="activities__events-list-item" data-month="january">
                     <a href="#" class="activities__events-card">
                         <div class="activities__events-card-date activities__events-card-date--blue">
                             29 января

@@ -28,6 +28,7 @@ import otherNews from './otherNews';
 import articleGallery from './articleGallery';
 import introFeatures from './introFeatures';
 import reviewsShowMore from './reviewsShowMore';
+import events from './events';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     articleGallery();
     introFeatures();
     reviewsShowMore();
+    events();
 
 });
 
