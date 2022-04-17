@@ -72,6 +72,15 @@
         }
     }
 
+    &#to-container {
+        @include breakpoint(mobile) {
+            .datepicker.dropdown-menu {
+                right: 0 !important;
+                left: auto !important;
+            }
+        }
+    }
+
     &:nth-child(even) {
         @include breakpoint(mobile) {
             .datepicker.dropdown-menu {
@@ -171,6 +180,8 @@
     line-height: 2rem;
     color: #393939;
     letter-spacing: -0.02em;
+
+   
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;

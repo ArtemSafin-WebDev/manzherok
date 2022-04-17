@@ -303,6 +303,10 @@
     white-space: nowrap;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+
+    }
     svg {
         flex-shrink: 0;
         width: 1.5rem;
@@ -313,6 +317,12 @@
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);
+    }
+}
+
+.page-header__phone-link-text {
+    @include breakpoint(mobile) {
+        margin-top: 1px;
     }
 }
 

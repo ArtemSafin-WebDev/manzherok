@@ -54,10 +54,15 @@
         }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &--filled,
+    .no-touch &:hover {
         border-color: transparent;
         color: white;
+
+        &:link,
+        &:visited {
+            color: white;
+        }
         &::before {
             opacity: 1;
         }

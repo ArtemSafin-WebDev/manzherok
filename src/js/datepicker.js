@@ -110,6 +110,10 @@ export default function datepicker() {
             }
 
             getDifference();
+
+            $(from).trigger('blur');
+        }).on('hide', function() {
+            $(from).trigger('blur');
         });
 
     $(from).datepicker('setDate', tomorrow);
@@ -125,6 +129,11 @@ export default function datepicker() {
             // );
 
             getDifference();
+
+            $(to).trigger('blur');
+        })
+        .on('hide', function() {
+            $(to).trigger('blur');
         });
 
     // $(from).datepicker(

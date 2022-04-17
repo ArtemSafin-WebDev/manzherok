@@ -29,6 +29,7 @@ import articleGallery from './articleGallery';
 import introFeatures from './introFeatures';
 import reviewsShowMore from './reviewsShowMore';
 import events from './events';
+import table from './table';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     introFeatures();
     reviewsShowMore();
     events();
+    table();
 
 });
 
