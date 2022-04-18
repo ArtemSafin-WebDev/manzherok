@@ -231,6 +231,7 @@ th {
 ::selection {
     color: white;
     background-color: var(--primary-color);
+    -webkit-text-fill-color: white;
 
 }
 
