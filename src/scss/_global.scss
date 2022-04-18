@@ -29,6 +29,12 @@ html {
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
 
+
+
+
+    @media screen and (min-width: 1920px) {
+        font-size: 11px;
+    }
     @media screen and (max-width: 1440px) {
         font-size: clamp(4px, 0.7vw, 10px);
     }
