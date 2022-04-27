@@ -34,13 +34,13 @@ export default function locationMap() {
                 function(multiRoute) {
                     multiRoute.options.set({
                         // Цвет метки начальной точки.
-                        wayPointStartIconFillColor: '#1aa456',
+                        wayPointStartIconFillColor: '#68B545',
                         // Цвет метки конечной точки.
-                        wayPointFinishIconFillColor: '#1aa456',
+                        wayPointFinishIconFillColor: '#68B545',
                         // Внешний вид линий (для всех маршрутов).
                         // Чтобы задать внешний вид линий активного маршрута,
                         // нужно использовать префикс 'routeActive'.
-                        routeActiveStrokeColor: '#1aa456'
+                        routeActiveStrokeColor: '#68B545'
                     });
                 },
                 function(err) {

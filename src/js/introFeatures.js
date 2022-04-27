@@ -14,22 +14,30 @@ export default function introFeatures() {
         element.addEventListener('click', event => {
             event.preventDefault();
             elements.forEach(element => element.classList.remove('active'));
+            // element.classList.add('active');
         })
 
         document.addEventListener('click', event => {
             if (event.target.matches('.intro__features-card') || event.target.closest('.intro__features-card')) {
-                return;
+                const card = event.target.matches('.intro__features-card') ? event.target : event.target.closest('.intro__features-card');
+                if (event.target.matches('.intro__features-card-dropdown-close') || event.target.closest('.intro__features-card-dropdown-close')) {
+                    card.classList.remove('active');
+                    return;
+                } else {
+                    card.classList.add('active');
+                    return;
+                }
             }
 
             elements.forEach(element => element.classList.remove('active'));
         })
 
-        elementsCloseBtns.forEach(btn => {
-            btn.addEventListener('click', event => {
-                event.preventDefault();
-                btn.closest('.intro__features-card').classList.remove('active');
-            })
-        })
+        // elementsCloseBtns.forEach(btn => {
+        //     btn.addEventListener('click', event => {
+        //         event.preventDefault();
+        //         btn.closest('.intro__features-card').classList.remove('active');
+        //     })
+        // })
 
         
     })

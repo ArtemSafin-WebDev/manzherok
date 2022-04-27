@@ -247,12 +247,13 @@
 .page-footer__logo {
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    gap: 1.2rem;
 }
 
 .page-footer__logo-text {
-    width: 8.6rem;
+    width: 3.2rem;
     height: auto;
+    order: 2;
 
     @include breakpoint(mobile) {
         display: none;

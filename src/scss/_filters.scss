@@ -13,8 +13,9 @@
     width: 100%;
     margin: 0 auto;
     padding: 2rem 3rem;
-    background: rgba(26, 164, 86, 0.6);
+    background: rgba(104, 181, 69, 0.6);
     backdrop-filter: blur(27px);
+    border: 1px solid #468F70;
 
     @include breakpoint(mobile) {
         padding: 1.5rem;

@@ -1,10 +1,14 @@
 <svg width="44" height="31" viewBox="0 0 44 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26 10V30" stroke="#1AA456" stroke-miterlimit="10" stroke-dasharray="24 13.2"/>
-<path d="M35.6508 10H3.34921C2.05178 10 1 11.0458 1 12.3358V27.6642C1 28.9542 2.05178 30 3.34921 30H35.6508C36.9482 30 38 28.9542 38 27.6642V12.3358C38 11.0458 36.9482 10 35.6508 10Z" stroke="#1AA456" stroke-linejoin="round"/>
-<path d="M6 7.55475V3.33577C6 2.71628 6.2475 2.12218 6.68806 1.68414C7.12863 1.2461 7.72616 1 8.34921 1H40.6508C41.2738 1 41.8714 1.2461 42.3119 1.68414C42.7525 2.12218 43 2.71628 43 3.33577V18.6642C43 19.2837 42.7525 19.8778 42.3119 20.3159C41.8714 20.7539 41.2738 21 40.6508 21" stroke="#1AA456" stroke-linejoin="round"/>
-<path d="M29 14H35" stroke="#1AA456" stroke-linejoin="round"/>
-<path d="M29 18H35" stroke="#1AA456" stroke-linejoin="round"/>
-<path d="M29 22H35" stroke="#1AA456" stroke-linejoin="round"/>
-<path d="M29 26H35" stroke="#1AA456" stroke-linejoin="round"/>
-<path d="M6 5H43" stroke="#1AA456" stroke-linejoin="round"/>
+    <path d="M26 10V30" stroke="#68B545" stroke-miterlimit="10" stroke-dasharray="24 13.2" />
+    <path
+        d="M35.6508 10H3.34921C2.05178 10 1 11.0458 1 12.3358V27.6642C1 28.9542 2.05178 30 3.34921 30H35.6508C36.9482 30 38 28.9542 38 27.6642V12.3358C38 11.0458 36.9482 10 35.6508 10Z"
+        stroke="#68B545" stroke-linejoin="round" />
+    <path
+        d="M6 7.55475V3.33577C6 2.71628 6.2475 2.12218 6.68806 1.68414C7.12863 1.2461 7.72616 1 8.34921 1H40.6508C41.2738 1 41.8714 1.2461 42.3119 1.68414C42.7525 2.12218 43 2.71628 43 3.33577V18.6642C43 19.2837 42.7525 19.8778 42.3119 20.3159C41.8714 20.7539 41.2738 21 40.6508 21"
+        stroke="#68B545" stroke-linejoin="round" />
+    <path d="M29 14H35" stroke="#68B545" stroke-linejoin="round" />
+    <path d="M29 18H35" stroke="#68B545" stroke-linejoin="round" />
+    <path d="M29 22H35" stroke="#68B545" stroke-linejoin="round" />
+    <path d="M29 26H35" stroke="#68B545" stroke-linejoin="round" />
+    <path d="M6 5H43" stroke="#68B545" stroke-linejoin="round" />
 </svg>
