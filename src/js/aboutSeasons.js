@@ -15,7 +15,7 @@ export default function aboutSeasons() {
 
         cards.forEach((card, cardIndex) => {
             card.addEventListener('click', event => {
-                event.preventDefault();
+                // event.preventDefault();
                 setActiveCard(cardIndex);
             })
         })
